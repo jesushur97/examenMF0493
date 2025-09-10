@@ -86,7 +86,7 @@ class Producto {
         if ($this->id == 0) {
             $stmt = $this->db->prepare("INSERT INTO productos (nombre_producto, descripcion, precio, stock, imagen_url, idCategoria) VALUES (?, ?, ?, ?, ?, ?)");
             $stmt->bind_param("ssdisi", $this->nombreProducto, $this->descripcion, $this->precio, $this->stock, $this->imagenURL, $idCategoria);
-            $idCategoria = 1; // Puedes ajustar esto según tu lógica
+            $idCategoria = 1; 
             $stmt->execute();
             $this->id = $this->db->insert_id;
         } else {
