@@ -6,10 +6,7 @@ character set latin1
 
 use tienda_web;
 
-create user admin_tienda 
-identified by 'P100cpbvepatv!';
 
-grant all PRIVILEGES on tienda_web.* to admin_tienda;
 
 create table usuarios (
     id int unsigned AUTO_INcreMENT primary key,
@@ -19,8 +16,7 @@ create table usuarios (
     rol enum('admin','usuario') not null default 'usuario'
 );
 
-insert into usuarios (nombre_usuario,email,contrasena,rol) values
-('admin','123456');
+
 
 create TABLE   categorias (
     id int unsigned AUTO_INcreMENT primary key,

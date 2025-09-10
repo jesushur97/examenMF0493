@@ -56,7 +56,7 @@ class Usuario {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } 
 
-    /** Métodeo de la clase qye insert o actualiza un usuario */
+    /** Método de la clase que inserta o actualiza un usuario */
     public function guardar() {
         if ($this->id==0) {
             // queremos insertar
